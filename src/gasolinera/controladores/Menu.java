@@ -47,6 +47,16 @@ public class Menu {
 			case 3:
 
 				for (int i = 0; i < BD.size(); i++) {
+					System.out.println(BD.get(i).toStringNormal());
+				}
+
+				System.out.print("Escribe para volver al menu: ");
+				sc.next();
+				break;
+				
+			case 4:
+
+				for (int i = 0; i < BD.size(); i++) {
 					System.out.println(BD.get(i).toString());
 				}
 

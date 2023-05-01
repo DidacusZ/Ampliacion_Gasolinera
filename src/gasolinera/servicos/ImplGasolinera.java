@@ -31,7 +31,8 @@ public class ImplGasolinera implements InterfazGasolinera {
 		litros = sc.nextDouble();
 		System.out.print("Introduce el importe: ");
 		importe = sc.nextDouble();
-
+		sc.close();
+		
 		// guardar datos
 		objetoGasolinera.setId(calculoIdGaso(baseDatos));
 		objetoGasolinera.setFecha(fecha);
@@ -75,6 +76,7 @@ public class ImplGasolinera implements InterfazGasolinera {
 		dni = sc.next();
 		System.out.print("Introduce la matricula de tu coche: ");
 		matricula = sc.next();
+		sc.close();
 		
 		// guardar datos RepoFactura
 		objetoGasolinera.setDni(dni);
@@ -98,9 +100,5 @@ public class ImplGasolinera implements InterfazGasolinera {
 		return auxiliar + 1;
 	}
 
-	private void Respostaje() {
 
-		
-		
-	}
 }
