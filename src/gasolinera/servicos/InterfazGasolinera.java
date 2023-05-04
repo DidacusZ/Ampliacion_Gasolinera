@@ -7,7 +7,35 @@ import gasolinera.entidades.Gasolinera;
 public interface InterfazGasolinera {
 
 	
-	public List<Gasolinera> RepostajeNormal(List<Gasolinera> baseDatos);
+	/**
+	 * crea un repostaje normal o con factura y lo guarda  el la lista
+	 * @param baseDatos
+	 * @param v
+	 * @return
+	 */
+	public List<Gasolinera> Repostaje(List<Gasolinera> baseDatos, boolean v);
 	
-	public List<Gasolinera> RepostajeFactura(List<Gasolinera> baseDatos);
+	
+	/**
+	 * muestra repostajes normal o con factura
+	 * @param baseDatos
+	 * @param verdad
+	 */
+	public void MostrarRepostaje(List<Gasolinera> baseDatos, boolean verdad);
+
+	
+	/**
+	 * elmina el repostaje n
+	 * @param baseDatos
+	 * @param n
+	 */
+	public void ElimininarRepostaje(List<Gasolinera> baseDatos,int n);
+	
+	
+	/**
+	 * modifica el repostaje n
+	 * @param baseDatos
+	 * @param n
+	 */
+	public void ModificarRepostaje(List<Gasolinera> baseDatos,int n);
 }

@@ -15,8 +15,18 @@ public class Gasolinera {
 	private double litros = 0.0;
 
 	private double importe = 0.0;
+	
+	private boolean repoVerdad; // true-->normal;  false-->factura;
 
 	// getters y setters
+
+	public boolean getRepoVerdad() {
+		return repoVerdad;
+	}
+
+	public void setRepoVerdad(boolean repoVerdad) {
+		this.repoVerdad = repoVerdad;
+	}
 
 	public int getId() {
 		return id;
@@ -89,7 +99,7 @@ public class Gasolinera {
 		return "Repostaje con Factura [id=" + id + ", dni=" + dni + ", fecha=" + fecha + ", matricula=" + matricula + ", litros="
 				+ litros + ", importe=" + importe + "]";
 	}
-		
+	
 	public String toStringNormal() {
 		return "Repostaje Normal [id=" + id + ", fecha=" + fecha + ", litros=" + litros + ", importe=" + importe + "]";
 	}

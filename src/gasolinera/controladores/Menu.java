@@ -30,25 +30,25 @@ public class Menu {
 		boolean verdad = true;
 
 		do {
+			
 			menu.MostarMenu();
 			num = sc.nextInt();
+			
 			switch (num) {
 
 			case 1:
-				BD = gasolinera.RepostajeNormal(BD);
+				BD = gasolinera.Repostaje(BD,true);
 
 				break;
 
 			case 2:
-				BD = gasolinera.RepostajeFactura(BD);
+				BD = gasolinera.Repostaje(BD,false);
 
 				break;
 
 			case 3:
 
-				for (int i = 0; i < BD.size(); i++) {
-					System.out.println(BD.get(i).toStringNormal());
-				}
+				gasolinera.MostrarRepostaje(BD,true);
 
 				System.out.print("Escribe para volver al menu: ");
 				sc.next();
@@ -56,12 +56,28 @@ public class Menu {
 				
 			case 4:
 
-				for (int i = 0; i < BD.size(); i++) {
-					System.out.println(BD.get(i).toString());
-				}
+				gasolinera.MostrarRepostaje(BD,false);
 
 				System.out.print("Escribe para volver al menu: ");
 				sc.next();
+				break;
+								
+			case 5:
+				
+				System.out.print("Introduce el ID del repostaje a eliminar: ");
+				num = sc.nextInt();
+				
+				gasolinera.ElimininarRepostaje(BD, num);// no hay error cuando no existe repostaje			
+				
+				break;
+				
+			case 6:
+				
+				System.out.print("Introduce el ID del repostaje a modificar: ");
+				num = sc.nextInt();
+				
+				gasolinera.ModificarRepostaje(BD, num);// no hay error cuando no existe repostaje				
+				
 				break;
 
 			case 0:
